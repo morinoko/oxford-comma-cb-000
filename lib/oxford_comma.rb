@@ -5,10 +5,11 @@ def oxford_comma(array)
     array.join(" and ")
   else
     oxford_comma_str = ""
+    last_index = array.index(array.last)
     array.each_with_index do |item, index|
-      if index < array.index(array.last)
+      if index < last_index
         oxford_comma_str << item + ", "
-      elsif index == array.index(array.last)
+      elsif index == last_index
         oxford_comma_str << "and " + item
       end
     end
