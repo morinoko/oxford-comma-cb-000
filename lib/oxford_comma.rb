@@ -23,7 +23,7 @@ def oxford_comma(array)
   elsif array.size == 2
     return array.join(" and ")
   else
-    last_index = array.index(array.last)
+    array[-1] = 
     array.insert(last_index, "and")
     array.join(", ")
   end
